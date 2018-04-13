@@ -1,3 +1,7 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/zouyi1/pen/yKgYZP.
+KavaSage Team Members
 
- A simple svg animation I made with GreenSock.
+Brian Chiang chiangiting@gmail.com
+
+Yi Zou yiyeautumn@gmail.com
+
+Tolik Hordiienko 77stiker77@gmail.com
