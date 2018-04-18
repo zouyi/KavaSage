@@ -5,6 +5,118 @@ function setup() {
     transformOrigin:"bottom center"
   });
   
+    TweenMax.set(".st1", {
+    scale:0,
+    transformOrigin:"center"
+  });
+  
+     TweenMax.set(".st2", {
+    scale:0,
+    transformOrigin:"center"
+  });
+  
+  TweenMax.set("#s-branch-1", {
+    scale:0,
+    transformOrigin:"right top"
+  });
+  
+   TweenMax.set("#s-branch-2", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+     TweenMax.set("#s-branch-3", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+
+  TweenMax.set("#s-branch-4", {
+    scale:0,
+    transformOrigin:"center bottom"
+  });
+  
+    
+     TweenMax.set("#s-branch-5", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+  TweenMax.set("#s-branch-6", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+  TweenMax.set("#s-branch-7", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+  TweenMax.set("#s-branch-8", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+  TweenMax.set("#s-branch-9", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+    TweenMax.set("#s-branch-10", {
+    scale:0,
+    transformOrigin:"left bottom"
+  });
+  
+    TweenMax.set("#s-branch-11", {
+    scale:0,
+    transformOrigin:"left bottom"
+  });
+  
+    TweenMax.set("#s-branch-12", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+    TweenMax.set("#s-branch-13", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+    TweenMax.set("#s-branch-14", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+    TweenMax.set("#s-branch-15", {
+    scale:0,
+    transformOrigin:"left top"
+  });
+  
+    TweenMax.set("#s-branch-16", {
+    scale:0,
+    transformOrigin:"left center"
+  });
+  
+    TweenMax.set("#s-branch-17", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+    TweenMax.set("#s-branch-18", {
+    scale:0,
+    transformOrigin:"left top"
+  });
+  
+    TweenMax.set("#s-branch-19", {
+    scale:0,
+    transformOrigin:"right bottom"
+  });
+  
+   TweenMax.set("#s-branch-20", {
+    scale:0,
+    transformOrigin:"left bottom"
+  });
+  
   TweenMax.set("#m-branch-1", {
     scale:0,
     transformOrigin:"right bottom"
@@ -106,21 +218,98 @@ var tl = new TimelineMax({
       scale:1
     }, 0).to("#main",2, {
         scale:1
+         }, 0).to(".st1",2, {
+        scale:1,
+      delay:4.5
+     
+        }, 0).to(".st2",2, {
+        scale:1,
+      delay:5.5
+    }, 0).to("#s-branch-1",2, {
+        scale:1,
+        delay:3.0
+     }, 0).to("#s-branch-2",2, {
+        scale:1,
+        delay:3.0
+     }, 0).to("#s-branch-3",2, {
+        scale:1,
+        delay:3.0
+     }, 0).to("#s-branch-4",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-5",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-4",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-5",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-4",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-5",2, {
+        scale:1,
+        delay:3.0
+     
+      }, 0).to("#s-branch-9",2, {
+        scale:1,
+        delay:3.0
+     
+      }, 0).to("#s-branch-10",2, {
+        scale:1,
+        delay:3.2
+     
+      }, 0).to("#s-branch-11",2, {
+        scale:1,
+        delay:3.0
+     
+      }, 0).to("#s-branch-12",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-13",2, {
+        scale:1,
+        delay:3.0
+     
+      }, 0).to("#s-branch-14",2, {
+        scale:1,
+        delay:3.0
+     
+      }, 0).to("#s-branch-15",2, {
+        scale:1,
+        delay:3.0
+     
+      }, 0).to("#s-branch-16",2, {
+        scale:1,
+        delay:3.9
+      }, 0).to("#s-branch-17",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-18",2, {
+        scale:1,
+        delay:3.0
+      }, 0).to("#s-branch-19",2, {
+        scale:1,
+        delay:3.0
+     }, 0).to("#s-branch-20",2, {
+        scale:1,
+        delay:3.0
     }, 0).to("#m-branch-1",2, {
         scale:1,
         delay:1.1
     }, 0).to("#m-branch-2",2, {
         scale:1,
-        delay:2.4
+        delay:2.6
       }, 0).to("#m-branch-3",2, {
         scale:1,
         delay:1.6
       }, 0).to("#m-branch-4",2, {
         scale:1,
-        delay:2.4
+        delay:1.6
       }, 0).to("#m-branch-5",2, {
         scale:1,
-        delay:2.4
+        delay:1.1
      }, 0).to("#m-branch-6",2, {
         scale:1,
         delay:1.1

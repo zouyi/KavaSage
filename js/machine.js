@@ -10,12 +10,14 @@ var content = document.getElementById("content");
 var picture = document.getElementById("picture");
 
 var machine = document.getElementById("machine");
+var smoke = document.getElementById("smoke");
 
 var continueButton = document.getElementById("continue");
 var roastButton = document.getElementById("roastButton");
 var coolingButton = document.getElementById("coolingButton");
 var getButton = document.getElementById("getButton");
-
+var quizButton = document.getElementById("quizButton");
+var resetButton = document.getElementById("resetButton");
 
 //Check whether bean has been loaded
 var beanLoad = 0;
@@ -25,8 +27,12 @@ var selection = 0;
 
 var smoking = 0;
 
+//check whether bean is on the screen
+var beanScreen = 0;
+
+
 //this is for debugging 
-smoke();
+//smoke1();
 
 
 lbutton.addEventListener("click", function(){
@@ -80,7 +86,7 @@ roastButton.addEventListener("click", function(){
   
 
   title.innerHTML = "ROASTING";
-  content.innerHTML ="Roasting is cool";
+  content.innerHTML ="Roasting coffee transforms the chemical and physical properties of green coffee beans into roasted coffee products. The roasting process is what produces the characteristic flavor of coffee by causing the green coffee beans to change in taste.";
   picture.src="Photos/coffeefinishrolling.jpg";;
   
   roastButton.style.display="none";
@@ -88,8 +94,10 @@ roastButton.addEventListener("click", function(){
   setTimeout(function(){    
 
         coolingButton.style.display="inline";
+     smoke();
  }, 4000);
   
+ 
 
   
 })
@@ -99,10 +107,10 @@ coolingButton.addEventListener("click", function(){
   var sound = document.getElementById("steamSound");
   title.innerHTML = "Cooling";
   coolingButton.style.display = "none";
-  content.innerHTML ="Cooling is cool";
+  content.innerHTML ="Once the beans have been roasted to your desired roast you need to cool the coffee beans quickly to stop the roast from continuing. There are a number of methods to do this, here are a few.";
   picture.src="Photos/coffeefinishrolling.jpg";;
     sound.play();
-  smoke();
+  smoke1();
   
   setTimeout(function(){
     getButton.style.display = "inline";
@@ -112,7 +120,8 @@ coolingButton.addEventListener("click", function(){
 
 getButton.addEventListener("click", function(){
   
-  
+  if(beanScreen < 1){
+    
     var popsound = document.getElementById("popSound");
   popsound.play();
 
@@ -148,8 +157,27 @@ getButton.addEventListener("click", function(){
   myBean.style.left = "100px";
   myBean.style.width="10%";
   myBean.style.position="relative";
+    myBean.style.zIndex="2";
   dispDiv.appendChild(myBean);
+    getButton.style.display="none";
+    quizButton.style.display="inline";
+    resetButton.style.display="inline";
+      beanScreen=1;
+    
+  }
+    
+  
+})
 
+resetButton.addEventListener("click", function(){
+  
+  window.location.href= "machine.html";
+  
+})
+
+quizButton.addEventListener("click", function(){
+  
+  window.location.href= "quiz.html";
   
 })
 
@@ -180,25 +208,16 @@ function getBean() {
   
 }
 
-function smoke (){
+function smoke1(){
   
   if(smoking<1){
       //put smoking animation here
-  var smoke = document.createElement("img");
-  smoke.setAttribute("id", "smoke");
-  smoke.src="SVG/coffeeSVG/Smoke.svg";
-  smoke.style.top = "-1420px";
-  smoke.style.left = "400px";
-  smoke.style.width="20%";
-  smoke.style.position="relative";
-  dispDiv.appendChild(smoke);
-  
+  smoke.style.display = "inline";
   smoke.style.animation = "smokeRising 3s infinite";
     smoking=1;
   }
-
-
 }
+
 
 function allowDrop(ev) {
     ev.preventDefault();

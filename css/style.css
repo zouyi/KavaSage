@@ -6,6 +6,10 @@ html, body {
     background-color:#f7f3e3;
 }
 
+a {
+  color:#f7f3e3;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -23,6 +27,14 @@ html, body {
   .container {
     flex-direction: row;
   }
+}
+
+#logo{
+  position:relative;
+  left:42.5%;
+  top:5px;
+  width:50%;
+  height:50%;
 }
 
 #animation {

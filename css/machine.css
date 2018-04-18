@@ -80,7 +80,7 @@
 #coolingButton{
     font-family: 'Cinzel', serif;
 
-  z-index: 1;
+  z-index: 2;
     font-size:40pt;
     position:relative;
     bottom:800px;
@@ -100,10 +100,41 @@
     bottom:950px;
   left:1350px;
     color:#6f1a07;
-  display:inline;
+  display:none;
   cursor:pointer;
   
 }
+
+
+#quizButton{
+    font-family: 'Cinzel', serif;
+
+  z-index: 1;
+    font-size:40pt;
+    position:relative;
+    bottom:1140px;
+  left:1350px;
+    color:#6f1a07;
+  display:none;
+  cursor:pointer;
+  
+}
+
+
+#resetButton{
+    font-family: 'Cinzel', serif;
+
+  z-index: 1;
+    font-size:40pt;
+    position:relative;
+    bottom:1040px;
+  left:960px;
+    color:#6f1a07;
+  display:none;
+  cursor:pointer;
+  
+}
+
 
 #dropzone {
   
@@ -117,6 +148,20 @@
   top:120px;
 
 }
+
+#selectionGuide {
+  
+   font-family: 'Cinzel', serif;
+
+  z-index: 1;
+    font-size:26pt;
+      color:#6f1a07;
+  position:relative;
+  left:-495px;
+  top:960px;
+
+}
+
 
 
 #msgbox {
@@ -158,22 +203,26 @@ bottom:-76px;
 }
 
 #smoke{
-
+position:relative;
+  top:-620px;
+  left:370px;
+  width:20%;
+  display:none;
 }
 
 
 @-webkit-keyframes smokeRising {
-    from {opacity: 0;top: -1420px}
+    from {opacity: 0;top: -620px}
     20% {opacity: 0}
     50% {opacity: 1}
-    to {opacity: 0;top: -1690px}
+    to {opacity: 0;top: -890px}
 }
 
 @keyframes smokeRising {
-     from {opacity: 0;top: -1420px}
+     from {opacity: 0;top: -620px}
        20% {opacity: 0}
     50% {opacity: 1}
-    to {opacity: 0;top: -1690px}
+    to {opacity: 0;top: -890px}
 }
 
 
