@@ -19,39 +19,42 @@
 </head>
 
 <body>
-    <ul>
+   
+       <ul>
 
         <li id="floatLeft"><a>Kava Sage</a></li>
 
-  
-
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+<li><a href="#about">About us</a></li>
     <li><a class="active" href="#home">Home</a></li>
 </ul>
-    
     <div id="display">
     
-                
-        <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">[ Drop here ]</div>
+        <div id="themachine">       
+        <div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><div id="droptext">Drop here</div><div id="downArrow"></div></div>
+          
         <div id="selectionGuide" ondrop="drop(event)" ondragover="allowDrop(event)">Select a level ></div>
 
         <label id="llabel" class="labelFont" for="lbutton">Light</label>
         <label id="mlabel" class="labelFont" for="mbutton">Medium</label>
         <label id="dlabel" class="labelFont" for="dbutton">Dark</label>
-
+        <div id="levelSelection"><div id="droptextright">Select a level</div>
+        <div id="rightArrow"></div></div>
+          
         <img id="lbutton" class="button" src="SVG/CoffeeSVG/Button.svg">
         <img id="mbutton" class="button" src="SVG/CoffeeSVG/Button.svg">
         <img id="dbutton" class="button" src="SVG/CoffeeSVG/Button.svg">
         <img id="machine" src="SVG/CoffeeSVG/Roastingmachine.svg">
         <img ondragstart="drag(event)" draggable="true" id="gBean" src="SVG/CoffeeSVG/Greenbean.svg">
-        <img id="smoke" src="SVG/CoffeeSVG/Smoke.svg">
+        <img id="smoke" src="SVG/CoffeeSVG/Smoke.svg"> 
+        </div> 
         <div id="msgbox">
             <h2 id="title">Roasting Machine</h2>
-          <p id="content">Roasting coffee transforms the chemical and physical properties of green coffee beans into roasted coffee products. The roasting process is what produces the characteristic flavor of coffee by causing the green coffee beans to change in taste. Unroasted beans contain similar if not higher levels of acids, protein, sugars, and caffeine as those that have been roasted, but lack the taste of roasted coffee beans due to the Maillard and other chemical reactions that occur during roasting.
-
-</p>
+          <p id="content">Roasting coffee transforms the chemical and physical properties of green coffee beans into roasted coffee products. The roasting process is what produces the characteristic flavor of coffee by causing the green coffee beans to change in taste. Unroasted beans contain similar if not higher levels of acids, protein, sugars, and caffeine as those that have been roasted, but lack the taste of roasted coffee beans due to the Maillard and other chemical reactions that occur during roasting.</p>
           <img id="picture" src="Photos/RoastingMachine.jpg">
+
+      </div>
+
+
 </div>
       
       
@@ -63,7 +66,7 @@
 
 
        
-</div>
+
   
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>

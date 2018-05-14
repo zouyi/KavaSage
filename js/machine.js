@@ -1,5 +1,9 @@
 var dispDiv = document.getElementById("display");
 var greenBean = document.getElementById("gBean");
+var dropzone = document.getElementById("dropzone");
+var levelselection = document.getElementById("levelSelection");
+
+
 
 var lbutton = document.getElementById("lbutton");
 var mbutton = document.getElementById("mbutton");
@@ -231,9 +235,11 @@ function drag(ev) {
 }
 
 function drop(ev) {
-    console.log("dropped!");
+    //console.log("dropped!");
     greenBean.style.display = "none";
     beanLoad = 1;
+  dropzone.style.display="none";
+  levelselection.style.display="inline";
     console.log("beanload value is" +beanLoad)
     dropSound();
    roasting();
