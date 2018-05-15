@@ -44,7 +44,7 @@ var des = document.getElementById("des"),
             </div>
         </div>`,
     question3 = `<div id="quiz3">
-            <p>3. What is the colour of none roasted coffee bean?</p>
+            <p>3. What is the colour of non-roasted coffee bean?</p>
             
             <div id = "options">
                 <input type="radio" id="correct" name="option"/>
@@ -109,12 +109,10 @@ var des = document.getElementById("des"),
     fivePoints = `<p>Congratulations! You got a perfect score. You recieve a free 500g of our medium roasted coffee bean and a 10% off coupon for your next purchase.</p>
                 <div id = "nextBut6">
                 <div id="next">Go To Shop</div>
-                <img src="SVG/ArrowSVG/RightArrow.svg" id="arrow"/>
                 </div>`,
     notFivePoints = `<p>Congratulations! You recieve a 10% off coupon for your next purchase.</p>
                     <div id = "nextBut6">
                     <div id="next">Go To Shop</div>
-                    <img src="SVG/ArrowSVG/RightArrow.svg" id="arrow"/>
                     </div>`; 
 
 
@@ -182,9 +180,10 @@ document.getElementById("button").addEventListener("click", function(){
                         if(score == 5){
                             des.innerHTML = fivePoints;
                         } else {
-                            des.innerHTML = notFivePoints;
-                            
+                            des.innerHTML = notFivePoints;  
                         }
+                        
+                        alert("Your score: " + score + "/5");
                     });
                 });
             });
