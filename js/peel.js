@@ -10,12 +10,16 @@ var downbutton = document.getElementById("DownButt");
 var greenTop = document.getElementById("imgTopGreen");
 var greenBottom = document.getElementById("imgBottomGreen");
 var nbtn = document.getElementById("btn");
+var BtnArrowUp = document.getElementsByClassName("arrowup");
+var BtnArrowDown = document.getElementsByClassName("arrow");
+var smlText = document.getElementById("smallText");
 
 var num1 = 0;
 var num2 = 0;
 
 var stage = 1;
-var stage2 = 1;
+var stage2 = 1,
+    arrowNum = 0;
 /*topPart.addEventListener("click", function () {
     topPart.style.bottom = "250px";
     topPart.style.display = "none";
@@ -44,22 +48,37 @@ upbutton.addEventListener("click", function () {
 
         console.log("clicked");
         topPart.style.display = "none";
+        smlText.style.display = "none";
+        msgbox.style.top = "-1403px";
+
         num1 = 1;
         console.log(num1, num2);
 
         if (num1 > 0 && num2 > 0) {
 
             displayMsg();
+
         }
         stage++;
+
 
     } else {
 
         greenTop.style.display = "none";
         greenBottom.style.top = "495px";
+        changeText.style.top = "93px";
+        msgbox.style.top = "-605px"
     }
 
 
+arrowNum++;
+    console.log(arrowNum);
+    if(arrowNum == 4){
+        nbtn.style.display = "block";
+        nbtn.style.top = "700px";
+        nbtn.style.right = "200px";
+        changeText.style.display = "none";
+    }
 });
 
 downbutton.addEventListener("click", function () {
@@ -68,10 +87,14 @@ downbutton.addEventListener("click", function () {
 
         console.log("clicked2");
         bottomPart.style.display = "none";
+        smlText.style.display = "none";
+        changeText.style.top = "-220px";
+        msgbox.style.top = "-920px";
         num2 = 1;
         if (num1 > 0 && num2 > 0) {
             console.log(num1, num2);
             displayMsg();
+
         }
 
         stage2++;
@@ -79,17 +102,27 @@ downbutton.addEventListener("click", function () {
     } else {
 
         greenBottom.style.display = "none";
+        changeText.style.top = "133px";
+       msgbox.style.top = "-132px";
 
+    }
 
+    arrowNum++;
+    console.log(arrowNum);
+    if(arrowNum == 4){
+        nbtn.style.display = "block";
+        nbtn.style.bottom = "-300px";
+        nbtn.style.left = "200px";
+        changeText.style.display = "none";
     }
 });
 
 
-nbtn.addEventListener("click", function(){
-  
-  window.location.href = "machine.html";
+nbtn.addEventListener("click", function() {
 
-})
+    window.location.href = "machine.html";
+    console.log("show the button")
+});
 
 
 function displayMsg() {

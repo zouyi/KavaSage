@@ -1,20 +1,20 @@
 .arrow {
     position: absolute;
     bottom: 120px;
-    left: 700px;
+    left: 800px;
     margin-left: -16px;
     cursor: pointer;
+    display: block;
 }
 
 .arrowup {
     position: absolute;
     top: 420px;
-    left: 700px;
+    left: 800px;
     margin-left: -16px;
     cursor: pointer;
+    display: block;
 }
-
-
 .bounce {
     -webkit-animation-name: bounce;
     -moz-animation-name: bounce;
@@ -220,9 +220,9 @@
 }
 
 #msgbox {
-    position: fixed;
+    position: relative;
     left: 1020px;
-    top: 100px;
+    top: -1450px;
     width: 550px;
     height: 600px;
     background-color: #2e241b;
@@ -260,6 +260,15 @@
     font-size: 40px;
     right: -100px;
     top: -700px;
+    display: block;
+}
+#smallText{
+    position: relative;
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    right: -100px;
+    top: -750px;
+    display: block;
 }
 .button{
     font-size:1.2em;
@@ -289,22 +298,5 @@
     left: 1200px;
     bottom: 500px;
     cursor: pointer;
-}
-@keyframes jump {
-    0% {
-        transform: scale(1,1) translate(0px, 0px);
-    }
-
-    30%{
-        transform: scale(1,0.8) translate(0px, 10px);
-    }
-
-    75%{
-        transform: scale(1,1.1) translate(0px, -25px);
-    }
-
-    100% {
-        transform: scale(1,1) translate(0px, 0px);
-    }
-
+    display: none;
 }
