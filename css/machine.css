@@ -68,6 +68,32 @@ border-width: 40px 0 40px 46px;
   }
 }
 
+#nextArrow{
+    position:absolute;
+  z-index: 1;
+ width: 0;
+height: 0;
+  top:789px;
+  left:840px;
+  border-style:solid;
+border-width: 40px 0 40px 46px;
+  
+  border-color:transparent transparent transparent #6f1a07;
+  animation: nextArrowFlash 1s infinite;
+  display:none;
+}
+
+
+@keyframes nextArrowFlash {
+ 0% {
+   
+    left:840px;
+  }
+  100% {
+      left:860px;
+  }
+}
+
 
 
 #downArrow:hover{
@@ -82,9 +108,6 @@ border-width: 40px 0 40px 46px;
     top:60px;
   }
 }
-
-
-
 
 #machine {
     top:200px;
@@ -163,6 +186,19 @@ border-width: 40px 0 40px 46px;
   font-size:12pt;
 }
 
+#action {
+     font-family: 'Cinzel', serif;
+
+  z-index: 1;
+    font-size:40pt;
+    position:absolute;
+    top:793px;
+  left:920px;
+    color:#6f1a07;
+  cursor:pointer;
+  
+}
+
 #roastButton{
        font-family: 'Cinzel', serif;
 
@@ -176,7 +212,6 @@ border-width: 40px 0 40px 46px;
   cursor:pointer;
   
 }
-
 
 #coolingButton{
     font-family: 'Cinzel', serif;
@@ -304,27 +339,28 @@ margin-top:10px;
 }
 
 #smoke{
-position:relative;
-  top:-620px;
-  left:370px;
-  width:20%;
+position:absolute;
+
+  top:400px;
+  left:320px;
+  width:16%;
   display:none;
 }
 
-
 @-webkit-keyframes smokeRising {
-    from {opacity: 0;top: -620px}
+    from {opacity: 0;top: 400px}
     20% {opacity: 0}
     50% {opacity: 1}
-    to {opacity: 0;top: -890px}
+    to {opacity: 0;top: 300px}
 }
 
 @keyframes smokeRising {
-     from {opacity: 0;top: -620px}
+     from {opacity: 0;top: 400px}
        20% {opacity: 0}
     50% {opacity: 1}
-    to {opacity: 0;top: -890px}
+    to {opacity: 0;top: 300px}
 }
+
 
 
 @keyframes shake {
