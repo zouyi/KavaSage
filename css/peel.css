@@ -227,6 +227,7 @@
     height: 600px;
     background-color: #2e241b;
     z-index: 9999;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #header {
