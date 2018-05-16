@@ -26,6 +26,7 @@ var nextButton = document.getElementById("nextButton");
 
 var actionButton = document.getElementById("action");
 var nextArrow = document.getElementById("nextArrow");
+var nextArrow2 = document.getElementById("nextArrow2");
 
 //Check whether bean has been loaded
 var beanLoad = 0;
@@ -39,8 +40,6 @@ var smoking = 0;
 var beanScreen = 0;
 
 var cooled =0;
-
-
 
 var stage = 0;
 
@@ -59,6 +58,7 @@ cooling = function(){
     actionButton.removeEventListener("click", cooling);
     nextArrow.style.diplay="inline";
     actionButton.innerHTML="Get the bean!";
+  actionButton.setAttribute("href", "quiz.html");
     actionButton.addEventListener("click", getBean);
   
   
@@ -97,7 +97,7 @@ getBean = function() {
     
       myBean.src="SVG/coffeeSVG/Lightbean.svg";
       title.innerHTML = "Light Roasted";
-  content.innerHTML ="Light Roast is cool";
+  content.innerHTML ="Light Roasts Retain Most of the Original Coffee Characteristics.<br><br>Light roasts have a light brown, tan, color and lack of oil on the roasted beans. They have the highest acidity and are the brightest of the three roast levels.<br><br>The characteristics of different origins are most pronounced in light roasts, as are the qualities of the individual coffee. Much of the taste comes from the original coffee, which is why light roasts are often used for cuppings.<br><br>Light roasts are sometimes called Half City, Light City, New England, or Cinnamon roasts.";
   picture.src="Photos/LightRoastedBean.jpg";
   
       
@@ -106,14 +106,14 @@ getBean = function() {
     
       myBean.src="SVG/coffeeSVG/mediumBean.svg";
       title.innerHTML = "Medium Roasted";
-      content.innerHTML ="Medium Roast is cool";
+      content.innerHTML ="Medium Roasts Balance Acidity and Body.<br><br>A medium roast will have a darker brown color than a light roast and will look richer. Some of the coffee’s oils may be visible on the beans, as well.<br><br>At this roast level, the coffee’s qualities begin to give way to the roast’s flavors and aromas, creating a balance between acidity and body. You’ll still be able to taste the original coffee, but the beans’ brightness will be complemented with the fuller body that is introduced by the roasting process.<br><br>Medium roasts go by City, Breakfast, Regular, and American roasts.";
       picture.src="Photos/MediumRoastBean.jpg";
   } else if (selection==3){
     
     
       myBean.src="SVG/coffeeSVG/darkBean.svg";
       title.innerHTML = "Dark Roasted";
-      content.innerHTML ="Dark Roast is cool";
+      content.innerHTML ="Dark roasts are dark brown, sometimes almost black, in color. They resemble chocolate, if it was shaped like a coffee bean. Oils can be seen on the beans at this point.<br><br>When drinking a dark roast, you’re almost exclusively tasting notes from the roast. The brightness of light roasts is replaced with body in dark roasts. Because the original coffee’s qualities are mostly lost at this roast level, it’s difficult to pick out the characteristics of a specific coffee’s origin or lot.<br><br>Historically, dark roasts have been popular in Europe, giving rise to terms such as Continental, Italian, French, and Spanish roasts.";
       picture.src="Photos/DarkRoastedBean.jpg";
   }
 
@@ -124,8 +124,13 @@ getBean = function() {
   myBean.style.position="absolute";
     myBean.style.zIndex="2";
   dispDiv.appendChild(myBean);
-
-    resetButton.style.display="inline";
+     
+     nextArrow.style.display = "inline";
+     nextArrow2.style.display = "inline";
+     resetButton.style.display = "inline";
+     actionButton.style.display = "none";
+     quizButton.style.display = "inline";
+    //actionButton.innerHTML="Take the quiz";
       beanScreen=1;
     
   }

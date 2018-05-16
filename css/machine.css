@@ -247,9 +247,9 @@ border-width: 40px 0 40px 46px;
 
   z-index: 1;
     font-size:40pt;
-    position:relative;
-    bottom:1140px;
-  left:1350px;
+    position:absolute;
+    top:793px;
+  left:920px;
     color:#6f1a07;
   display:none;
   cursor:pointer;
@@ -262,13 +262,43 @@ border-width: 40px 0 40px 46px;
 
   z-index: 1;
     font-size:40pt;
-    position:relative;
+    position:absolute;
     bottom:1040px;
   left:960px;
     color:#6f1a07;
   display:none;
   cursor:pointer;
   
+      top:888px;
+  left:920px;
+  
+}
+
+
+#nextArrow2{
+    position:absolute;
+  z-index: 1;
+ width: 0;
+height: 0;
+  top:880px;
+  left:840px;
+  border-style:solid;
+border-width: 40px 0 40px 46px;
+  
+  border-color:transparent transparent transparent #6f1a07;
+  animation: nextArrowFlash2 1s infinite;
+  display:none;
+}
+
+
+@keyframes nextArrowFlash2 {
+ 0% {
+   
+    left:840px;
+  }
+  100% {
+      left:860px;
+  }
 }
 
 
