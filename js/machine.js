@@ -38,30 +38,33 @@ var smoking = 0;
 //check whether bean is on the screen
 var beanScreen = 0;
 
+var cooled =0;
+
+
 
 var stage = 0;
 
-
-//this is for debugging 
-//smoke1();
+var clicked = false;
 
 cooling = function(){
    var sound = document.getElementById("steamSound");
   title.innerHTML = "Cooling";
-  content.innerHTML ="Once the beans have been roasted to your desired roast you need to cool the coffee beans quickly to stop the roast from continuing. There are a number of methods to do this, here are a few.";
+  content.innerHTML ="Once the beans have been roasted to your desired roast you need to cool the coffee beans quickly to stop the roast from continuing. There are a number of methods to do this. For example: air cooling and water cooling.";
   picture.src="Photos/coffeefinishrolling.jpg";;
     sound.play();
   smoke1();
+  cooled = 1;
   
-  setTimeout(function(){
+                   
     actionButton.removeEventListener("click", cooling);
     nextArrow.style.diplay="inline";
     actionButton.innerHTML="Get the bean!";
     actionButton.addEventListener("click", getBean);
-    
-  },3000);
+  
   
 }
+
+
 
 roasting = function(){
   
@@ -115,14 +118,13 @@ getBean = function() {
   }
 
 
-  myBean.style.top = "-1420px";
-  myBean.style.left = "100px";
+  myBean.style.top = "420px";
+  myBean.style.left = "620px";
   myBean.style.width="10%";
-  myBean.style.position="relative";
+  myBean.style.position="absolute";
     myBean.style.zIndex="2";
   dispDiv.appendChild(myBean);
-    getButton.style.display="none";
-    quizButton.style.display="inline";
+
     resetButton.style.display="inline";
       beanScreen=1;
     
@@ -193,7 +195,10 @@ function drop(ev) {
 
 function selectStage() {
     //activation button selection
-    lbutton.addEventListener("click", function(){
+  
+  
+      
+      lbutton.addEventListener("click", function(){
     
   lbutton.src = "SVG/CoffeeSVG/GlowingButton.svg";
     var sound = document.getElementById("buttonClick");
@@ -201,7 +206,11 @@ function selectStage() {
   selection = 1;
   mbutton.src = "SVG/CoffeeSVG/button.svg";
   dbutton.src = "SVG/CoffeeSVG/button.svg";
-  roastingStage();
+        
+        if(clicked==false){
+            roastingStage();
+        }
+  clicked = true;
 })
 
     mbutton.addEventListener("click", function(){
@@ -213,10 +222,14 @@ function selectStage() {
   lbutton.src = "SVG/CoffeeSVG/button.svg";
   dbutton.src = "SVG/CoffeeSVG/button.svg";
       
+          if(clicked == false){
+        
         roastingStage();
 
+      }
 
-    
+    clicked=true;
+
 })
 
     dbutton.addEventListener("click", function(){
@@ -227,8 +240,14 @@ function selectStage() {
     selection =3;
     lbutton.src = "SVG/CoffeeSVG/button.svg";
     mbutton.src = "SVG/CoffeeSVG/button.svg";
+      
+      if(clicked == false){
+        
         roastingStage();
 
+      }
+
+    clicked=true;
 
 })
     
@@ -253,13 +272,21 @@ function roastingStage() {
   content.innerHTML ="Roasting coffee transforms the chemical and physical properties of green coffee beans into roasted coffee products. The roasting process is what produces the characteristic flavor of coffee by causing the green coffee beans to change in taste.";
   picture.src="Photos/coffeefinishrolling.jpg";;
 
-        actionButton.innerHTML = "Cool it off";
     actionButton.removeEventListener("click", roasting);
-        actionButton.addEventListener("click", function(){
-          cooling();
-        })
+        actionButton.innerHTML = "Cool it off";
+        actionButton.addEventListener("click", cooling);
+        
     // smoke();
  }, 4000);
+      
+      
+      
+      setTimeout(function(){
+
+  
+}, 3000);
+                 
+                 
   
 }
 

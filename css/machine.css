@@ -319,7 +319,7 @@ left:30px;
 }
 
 p{
-  font-family: 'Cinzel', serif;
+  font-family: 'Quicksand', sans-serif;
     font-size:12pt;
     color:#f7f3e3;
     top:20px;
@@ -332,8 +332,8 @@ p{
 
 #picture {
 left:30px;
-  width:90%;
-  height:40%;
+  width:80%;
+  height:32%;
 margin-top:10px;
   position:absolute;
 }
