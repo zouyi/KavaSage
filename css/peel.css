@@ -240,13 +240,14 @@
 }
 
 #main-text {
-    font-family: 'Cinzel', serif;
+    font-family: 'quicksand', sans-serif;
     font-size: 10pt;
     color: #f7f3e3;
     top: 20px;
     position: relative;
     width: 90%;
     left: 30px;
+  font-size:12pt;
 }
 #picture {
     left:30px;

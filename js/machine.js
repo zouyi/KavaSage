@@ -48,7 +48,7 @@ var clicked = false;
 cooling = function(){
    var sound = document.getElementById("steamSound");
   title.innerHTML = "Cooling";
-  content.innerHTML ="Once the beans have been roasted to your desired roast you need to cool the coffee beans quickly to stop the roast from continuing. There are a number of methods to do this. For example: air cooling and water cooling.";
+  content.innerHTML ="Once the beans have been roasted to your desired roast you need to cool the coffee beans quickly to stop the roast from continuing. There are a number of methods to do this. For example: air cooling and water cooling.<br><br>The storage conditions of roasted coffee must ensure hygiene and prevent contamination of the product by volatile substances, such as oxygen (which can cause oxidisation) and moisture (which can increase the growth of mould).<br><br>Highly-professional companies of renowned traditions such as Saquella do not package coffee immediately after roasting, preferring to let the roasted beans settle and mature in silos.<br>";
   picture.src="Photos/coffeefinishrolling.jpg";;
     sound.play();
   smoke1();
@@ -274,7 +274,7 @@ function roastingStage() {
   setTimeout(function(){    
         nextArrow.style.display = "inline";
     title.innerHTML = "ROASTING";
-  content.innerHTML ="Roasting coffee transforms the chemical and physical properties of green coffee beans into roasted coffee products. The roasting process is what produces the characteristic flavor of coffee by causing the green coffee beans to change in taste.";
+  content.innerHTML ='Roasting coffee transforms the chemical and physical properties of green coffee beans into roasted coffee products.<br><br>The vast majority of coffee is roasted commercially on a large scale, but small-scale commercial roasting has grown significantly with the trend toward "single-origin" coffees served at specialty shops.<br><br>The first recorded implements for roasting coffee beans were thin pans made from metal or porcelain, used in the 15th century in the Ottoman Empire and Greater Persia. In the 19th century, various patents were awarded in the U.S. and Europe for commercial roasters, to allow for large batches of coffee.';
   picture.src="Photos/coffeefinishrolling.jpg";;
 
     actionButton.removeEventListener("click", roasting);
